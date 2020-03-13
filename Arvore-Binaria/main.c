@@ -5,7 +5,7 @@
 
 int main(){
     No *raiz, *no;
-    int op = -1, valor, qtd, alt;
+    int op = -1, valor, alt;
     clock_t inicio, fim, total;
 
     srand(time(NULL));
@@ -49,7 +49,8 @@ int main(){
                 int valores[] = {10, 400, 87, 520, 333, 666, 229, 933, 715, 190}, i = 0;
 
                 for (int j = 0; j < 4; j++){
-                    printf("Árvore %d -----------------------------------------------------------------------------------------\n", j+1);
+                    printf("----------------------------------------------------------------------------------------------\n");
+                    printf("Árvore %d\n", j+1);
                 
                     raiz = inicializar();
 
