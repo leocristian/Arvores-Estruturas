@@ -76,9 +76,9 @@ int qtdElementos(No *raiz){
     if(raiz == NULL){
         count = 0;
     }else{
-        count = qtdElementos((*raiz).direito)
-                + 1
-                + qtdElementos((*raiz).esquerdo);
+        count = qtdElementos((*raiz).esquerdo)
+                + 1 
+                + qtdElementos((*raiz).direito);
     }
     return count;
 }
