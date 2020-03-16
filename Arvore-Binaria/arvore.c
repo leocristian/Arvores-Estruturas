@@ -67,7 +67,7 @@ void buscar(No *raiz, int valor){
 }
 
 void mostrarNo(No *no){
-    printf("Nó encontrado: %d\n", no->valor);
+    printf("%d\n", no->valor);
 }
 
 int qtdElementos(No *raiz){

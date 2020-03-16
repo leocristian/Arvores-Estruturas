@@ -5,35 +5,36 @@
 
 int main(){
     No *raiz, *no;
-    int op = -1, valor, alt, qtdArvores;
+    int op = -1, valor, alt=50, qtdArvores=5;
     clock_t inicio, fim, total;
 
     srand(time(NULL)); 
-    printf("Digite a quantidade de árvores: ");
-    scanf("%d", &qtdArvores);
+    printf("Quantidade de árvores: %d\n", qtdArvores);
 
-    printf("Digite a altura das árvores: ");
-    scanf("%d", &alt);
-    
-    printf("---------Realizar buscas---------\n");
-    int valores[] = {10, 400, 87, 520, 333, 666, 229, 933, 715, 190}, i = 0;
+    printf("Altura das árvores: %d\n", alt);
+
+    int valores[] = {10, 700, 9800, 5000, 2430, 7500, 3890, 1903, 715, 9999}, i = 0;
 
     for (int j = 0; j < qtdArvores; j++){
         printf("----------------------------------------------------------------------------------------------\n");
-        printf("Árvore %d\n", j+1);
+        printf("Gerando Árvore %d\n", j+1);
     
         raiz = inicializar();
 
         do{
-            no = criarNo(rand()%1000);
+            no = criarNo(rand()%10000);
             raiz = inserir(raiz, no);
             //printf("%d ", valor);
+            printf("Altura: %d Valor inserido: ", altura(raiz));
+            mostrarNo(no);
         }while (altura(raiz) != alt);
 
-        printf("Árvore Gerada: ");
         mostrar(raiz);
+        printf("\n");
 
         for (i = 0; i < 10; i++) {
+            printf("Precione ENTER para buscar o nó: %d ", valores[i]);
+            getchar();
             printf("\nValor a ser buscado: %d\n", valores[i]);
             printf("Caminho percorrido: ");
             inicio = clock();
